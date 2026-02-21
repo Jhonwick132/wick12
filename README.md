@@ -1,302 +1,219 @@
+# Astro Sphere
 
-<p align="center">
-  <img src="img_7.png" width="100%" />
-</p>
-# Astro Portfolio Collection 🚀
+## Overview
 
-Welcome to the Astro Portfolio Collection! This repository contains 7 carefully selected portfolio templates to help you create your professional portfolio website quickly and easily.
+Astro Sphere is a feature-rich portfolio and blog template designed for designers and developers. It includes a modern design with dark mode support, blog functionality, project showcase, work experience section, and a built-in search feature.
 
-## 🎯 About This Collection
+## Tech Stack
 
-This collection was created to help students and developers build beautiful, fast, and modern portfolio websites using Astro. Each template is pre-configured for Vercel deployment and ready to customize with your own content.
+- **Framework:** Astro 4.x
+- **Styling:** Tailwind CSS
+- **UI Framework:** Solid.js
+- **Language:** TypeScript
+- **Features:** MDX support, RSS feed, Sitemap
 
-## 📚 Available Templates
-
-### TypeScript Templates
-
-#### 1. **Astro Sphere** 
-A feature-rich portfolio with blog support, dark mode, and modern design. Perfect for developers who want a complete solution with blog, projects, and work experience sections.
-![img.png](img.png)
-**Features:** Blog, Projects, Work Experience, Search, Dark Mode  
-**Tech:** Astro + Tailwind + Solid.js + TypeScript  
-📁 [View Template](./astro-sphere/)
-Live Demo: [https://astro-sphere-demo.vercel.app/](https://astro-sphere-demo.vercel.app/)
-
-#### 2. **Minimal Bento Portfolio**
-Trendy bento-box layout with smooth animations and interactive elements. Great for creatives who want a unique, eye-catching design.
-![img_2.png](img_2.png)
-**Features:** Bento Grid Layout, Animations (GSAP), Blog, SSR  
-**Tech:** Astro + UnoCSS + Solid.js + Svelte + TypeScript  
-📁 [View Template](./minimal-bento-portfolio/)
-
-Live Demo: [Link](https://bue221.vercel.app/)
-
-
-#### 3. **Astro Terminal (Astro Paper)**
-Minimal, accessible blog theme with excellent typography and SEO. Ideal for writers and developers who prioritize content and readability.
-![img_1.png](img_1.png)
-**Features:** Blog, Dark Mode, Search, Accessibility, Syntax Highlighting  
-**Tech:** Astro + Tailwind + TypeScript  
-📁 [View Template](./astro-terminal/)
-
-Live Demo: [Link](https://astro.build/themes/details/astro-terminal/)
-
-#### 4. **Devolio**
-Modern, minimalist portfolio built specifically for developers. Clean and professional design that showcases your technical skills.
-![img_3.png](img_3.png)
-**Features:** Project Showcase, Tech Stack Display, Clean Design  
-**Tech:** Astro + Tailwind + TypeScript  
-📁 [View Template](./devolio/)
-Live Demo: [Link](https://devolio.devaradise.com/)
-### JavaScript Templates
-
-#### 5. **Astrofy**
-Clean and beginner-friendly portfolio with CV, blog, projects, and optional store section. Great for those who want an all-in-one solution.
-![img_4.png](img_4.png)
-**Features:** CV/Resume, Blog, Projects, Services, Store (optional)  
-**Tech:** Astro + Tailwind + JavaScript  
-📁 [View Template](./astrofy/)
-Live Demo: [Link](https://astrofy-template.netlify.app/)
-
-#### 6. **LiteFolio**
-Lightweight and minimal portfolio focused on simplicity and fast loading. Perfect for developers who want a straightforward, no-frills site.
-![img_5.png](img_5.png)
-**Features:** Minimal Design, Fast Loading, Easy Customization  
-**Tech:** Astro + Tailwind + JavaScript  
-📁 [View Template](./litefolio/)
-Live Demo: [Link](https://litefolio.gonzalochale.com/)
-
-#### 7. **Swissfolio**
-Inspired by Swiss design principles with clean typography and grid-based layouts. Ideal for designers who appreciate timeless, elegant design.
-![img_6.png](img_6.png)
-**Features:** Swiss Design, Clean Typography, Grid Layout  
-**Tech:** Astro + Tailwind + JavaScript  
-📁 [View Template](./swissfolio/)
-Live Demo: [Link](https://swissfolio.netlify.app/)
-
-## 🚀 Getting Started
+## Quick Start
 
 ### Prerequisites
 
-Before you begin, make sure you have:
-- **Node.js 18 or higher** - [Download here](https://nodejs.org/)
-- **Git** - [Download here](https://git-scm.com/)
-- **A code editor** - We recommend [VS Code](https://code.visualstudio.com/)
-- **A GitHub account** - [Sign up here](https://github.com/)
-- **A Vercel account** - [Sign up here](https://vercel.com/) (free)
+- Node.js 18+ installed
+- Git installed
+- A code editor (VS Code recommended)
 
-### Quick Start Guide
+### Installation
 
-1. **Clone this repository**
-   ```bash
-   git clone <your-repo-url>
-   cd astro-portfolio-collection
-   ```
-
-2. **Browse all templates**
-   Try each template locally to see which one you like:
+1. Navigate to this folder:
    ```bash
    cd astro-sphere
+   ```
+
+2. Install dependencies:
+   ```bash
    npm install
+   ```
+
+3. Run the development server:
+   ```bash
    npm run dev
    ```
-   Open `http://localhost:4321` in your browser
 
-3. **Choose your favorite template**
-   Explore all 7 templates and pick the one that fits your style!
+4. Open your browser to `http://localhost:4321`
 
-4. **Delete the other templates**
-   Keep only your chosen template:
+## Customization Guide
+
+### Key Files to Edit
+
+#### 1. **src/consts.ts** - Your Personal Information
+This is the main configuration file where you'll update:
+- Your name and site title
+- Site description
+- Author information
+- Navigation links
+- Social media links (Email, GitHub, LinkedIn, Twitter)
+
+```typescript
+export const SITE: Site = {
+  TITLE: "Your Name",
+  DESCRIPTION: "Your portfolio description",
+  AUTHOR: "Your Name",
+}
+```
+
+#### 2. **src/content/work/** - Work Experience
+Add your work experience as Markdown files:
+- Create files like `company-name.md`
+- Include company, role, dates, and description
+- Add your achievements and responsibilities
+
+#### 3. **src/content/blog/** - Blog Posts
+Write blog posts in Markdown/MDX format:
+- Create files in this directory
+- Include frontmatter (title, date, description, tags)
+- Write your content in Markdown
+
+#### 4. **src/content/projects/** - Your Projects
+Showcase your projects:
+- Create Markdown files for each project
+- Include project name, description, technologies used
+- Add links to live demos and GitHub repos
+
+#### 5. **public/** - Static Assets
+Replace these files with your own:
+- `favicon.svg` - Your site icon
+- `og-image.png` - Social media preview image
+- Add project screenshots and images here
+
+#### 6. **src/pages/index.astro** - Homepage
+Customize your homepage content:
+- Update the hero section with your introduction
+- Modify the about section
+- Adjust the layout as needed
+
+### Step-by-Step Customization
+
+1. **Update Personal Info**
+   - Open `src/consts.ts`
+   - Change SITE.TITLE to your name
+   - Update SITE.DESCRIPTION with your tagline
+   - Add your social media links in SOCIALS array
+
+2. **Add Your Work Experience**
+   - Go to `src/content/work/`
+   - Create new `.md` files for each job
+   - Follow the existing format
+
+3. **Create Blog Posts**
+   - Navigate to `src/content/blog/`
+   - Create new `.md` or `.mdx` files
+   - Add frontmatter and content
+
+4. **Showcase Projects**
+   - Go to `src/content/projects/`
+   - Add your projects as Markdown files
+   - Include descriptions and links
+
+5. **Update Images**
+   - Replace `public/favicon.svg` with your logo
+   - Add your profile photo
+   - Update `public/og-image.png` for social sharing
+
+6. **Customize Colors (Optional)**
+   - Edit `tailwind.config.cjs` for theme colors
+   - Modify `src/styles/global.css` for custom styles
+
+## Deploy to Vercel
+
+This template is pre-configured for Vercel deployment!
+
+### Method 1: Deploy from this Repository
+
+1. **Keep only this template**
    ```bash
-   # Example: if you chose Astro Sphere
+   # Go back to the root directory
+   cd ..
+   
+   # Delete other templates
    rm -rf astrofy minimal-bento-portfolio litefolio swissfolio devolio astro-terminal
+   
+   # Move Astro Sphere files to root (optional)
+   mv astro-sphere/* .
+   rm -rf astro-sphere
    ```
 
-5. **Customize your chosen template**
-   - Follow the README inside your template folder
-   - Update your personal information
-   - Add your projects and content
-   - Replace images with your own
-
-6. **Test locally**
-   ```bash
-   cd your-chosen-template
-   npm install
-   npm run dev
-   ```
-
-7. **Push to GitHub**
+2. **Push to your GitHub**
    ```bash
    git add .
-   git commit -m "My portfolio"
+   git commit -m "My Astro Sphere portfolio"
    git push
    ```
 
-8. **Deploy to Vercel**
+3. **Deploy on Vercel**
    - Go to [vercel.com](https://vercel.com)
    - Click "New Project"
    - Import your GitHub repository
+   - Vercel will auto-detect Astro settings
    - Click "Deploy"
-   - Your site will be live in minutes!
 
-## 📖 Detailed Workflow
+### Method 2: Deploy as Subdirectory
 
-### Step 1: Explore Templates
+1. **Push the entire collection to GitHub**
 
-Each template folder contains:
-- A complete, working Astro site
-- A detailed README with customization instructions
-- Pre-configured for Vercel deployment
+2. **Deploy on Vercel**
+   - Go to [vercel.com](https://vercel.com)
+   - Click "New Project"
+   - Import your repository
+   - Set "Root Directory" to `astro-sphere`
+   - Click "Deploy"
 
-Try running each template locally:
+Your site will be live in minutes!
+
+## Build for Production
+
+To create a production build locally:
+
 ```bash
-cd template-name
-npm install
-npm run dev
+npm run build
 ```
 
-### Step 2: Choose and Customize
+Preview the production build:
 
-Once you've chosen your template:
-
-1. **Read the template's README** - Each template has specific customization instructions
-2. **Update configuration files** - Change site title, description, author info
-3. **Add your content** - Projects, blog posts, work experience, etc.
-4. **Replace images** - Profile photo, project screenshots, favicon
-5. **Test thoroughly** - Make sure everything works locally
-
-### Step 3: Deploy
-
-Two deployment options:
-
-**Option A: Single Template (Recommended)**
 ```bash
-# Keep only your chosen template
-# Move it to root or keep in folder
-git add .
-git commit -m "My portfolio"
-git push
+npm run preview
 ```
 
-**Option B: Multiple Templates**
-- Keep all templates in the repo
-- In Vercel, set "Root Directory" to your chosen template folder
+## Resources
 
-## 🎨 Choosing the Right Template
+- [Astro Documentation](https://docs.astro.build)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Solid.js Documentation](https://www.solidjs.com/docs/latest)
+- [Original Template](https://github.com/markhorn-dev/astro-sphere)
+- [Vercel Deployment Guide](https://vercel.com/docs)
 
-### For Bloggers & Writers
-- **Astro Terminal (Astro Paper)** - Best for content-focused sites
-- **Astro Sphere** - Great blog with additional portfolio features
+## Troubleshooting
 
-### For Developers
-- **Devolio** - Developer-specific design
-- **Astro Sphere** - Complete developer portfolio
-- **LiteFolio** - Simple and straightforward
-
-### For Designers & Creatives
-- **Minimal Bento Portfolio** - Unique, modern layout
-- **Swissfolio** - Elegant, timeless design
-- **Astrofy** - Versatile with many sections
-
-### For Beginners
-- **Astrofy** - Easy to understand and customize
-- **LiteFolio** - Simple structure
-- **Swissfolio** - Straightforward setup
-
-## 🆘 Troubleshooting
-
-### npm install fails
-- Make sure you have Node.js 18+ installed: `node --version`
+**Issue: npm install fails**
+- Ensure you have Node.js 18+ installed
 - Try deleting `node_modules` and `package-lock.json`, then run `npm install` again
-- Check your internet connection
 
-### Port already in use
-- The dev server runs on port 4321 by default
-- Kill the existing process or use a different port:
-  ```bash
-  npm run dev -- --port 3000
-  ```
+**Issue: Port 4321 already in use**
+- Kill the existing process or use a different port: `npm run dev -- --port 3000`
 
-### Build fails on Vercel
-- Check that all dependencies are in `package.json`
-- Ensure Node.js version is set correctly in Vercel settings (18.x or higher)
-- Check build logs for specific errors
-
-### Images not loading
+**Issue: Images not loading**
 - Make sure images are in the `public/` folder
 - Use correct paths (e.g., `/image.png` for files in public/)
-- Check file names and extensions
 
-### Template not working after customization
-- Check browser console for errors
-- Verify all required files are present
-- Make sure you didn't accidentally delete important files
-- Try reverting changes and applying them one at a time
+## Features
 
-## 📚 Resources
+- ✅ Modern, responsive design
+- ✅ Dark mode support
+- ✅ Blog with MDX support
+- ✅ Project showcase
+- ✅ Work experience section
+- ✅ Built-in search functionality
+- ✅ RSS feed
+- ✅ Sitemap generation
+- ✅ SEO optimized
+- ✅ Fast performance
+- ✅ Vercel-ready
 
-### Learning Resources
-- [Astro Documentation](https://docs.astro.build) - Official Astro docs
-- [Tailwind CSS Docs](https://tailwindcss.com/docs) - Styling framework
-- [Markdown Guide](https://www.markdownguide.org) - For blog posts
-- [Vercel Docs](https://vercel.com/docs) - Deployment platform
-
-### Astro Tutorials
-- [Astro Tutorial](https://docs.astro.build/en/tutorial/0-introduction/) - Official tutorial
-- [Astro Blog](https://astro.build/blog/) - Latest updates and tips
-
-### Design Inspiration
-- [Awwwards](https://www.awwwards.com/) - Web design inspiration
-- [Dribbble](https://dribbble.com/) - Design showcase
-- [Behance](https://www.behance.net/) - Creative portfolios
-
-## 🤝 Support
-
-Need help? Here are your options:
-
-1. **Check the template's README** - Each template has specific instructions
-2. **Read the troubleshooting section** - Common issues and solutions
-3. **Astro Discord** - [Join the community](https://astro.build/chat)
-4. **GitHub Issues** - Report bugs or ask questions
-5. **Event organizers** - Reach out to your event coordinators
-
-## ✨ Tips for Success
-
-1. **Start simple** - Don't try to customize everything at once
-2. **Test frequently** - Run `npm run dev` often to catch errors early
-3. **Use version control** - Commit your changes regularly
-4. **Read the docs** - Each template's README has valuable information
-5. **Ask for help** - Don't hesitate to reach out if you're stuck
-6. **Have fun!** - Building your portfolio should be enjoyable
-
-## 🎓 What You'll Learn
-
-By building your portfolio with these templates, you'll gain experience with:
-- Modern web development with Astro
-- Component-based architecture
-- Markdown for content
-- Tailwind CSS for styling
-- Git and GitHub for version control
-- Vercel for deployment
-- Web performance optimization
-- SEO best practices
-
-## 📝 Next Steps
-
-After deploying your portfolio:
-
-1. **Share it!** - Add the link to your GitHub profile, LinkedIn, resume
-2. **Keep it updated** - Regularly add new projects and blog posts
-3. **Monitor analytics** - Use Vercel Analytics to see your traffic
-4. **Optimize** - Improve performance and SEO over time
-5. **Customize further** - Make it truly yours with unique touches
-
-## 🌟 Showcase
-
-Built something awesome with these templates? We'd love to see it! Share your portfolio with the community.
-
----
-
-**Happy coding!** 🎉
-
-Built with ❤️ by [DSC SIST x skxdev](https://gdsc-base.framer.ai)
+Happy coding! 🚀
